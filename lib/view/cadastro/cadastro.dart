@@ -37,7 +37,7 @@ class _PagCadastroState extends State<PagCadastro> {
               children: [
                 const Padding(
                   padding: EdgeInsets.only(
-                    top: 80,
+                    top: 79,
                   ),
                   child: Text(
                     'Vamos começar!',
