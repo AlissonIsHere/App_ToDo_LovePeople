@@ -1,3 +1,4 @@
+import 'package:app_todo_lovepeople/view/login_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   
         primarySwatch: Colors.blue,
       ),
-      
+      home: const LoginPage(),
     );
   }
 }
