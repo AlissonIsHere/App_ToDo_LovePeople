@@ -19,6 +19,7 @@ class _TodoListState extends State<TodoList> {
 
   @override
   Widget build(BuildContext context) {
+    final todo = ModalRoute.of(context)!.settings.arguments as Todo;
     return Scaffold(
       body: Column(
         children: [
@@ -163,7 +164,9 @@ void _showDialog() {
       contentPadding: EdgeInsets.fromLTRB(20, 2, 0, 10),
       actions: [
         MaterialButton(
-          onPressed: () {},
+          onPressed: () {
+            
+          },
           child: const Text(
             'Confirmar',
             style: TextStyle(

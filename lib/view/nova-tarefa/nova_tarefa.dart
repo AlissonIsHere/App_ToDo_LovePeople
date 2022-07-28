@@ -151,7 +151,7 @@ class _NovaTarefaState extends State<NovaTarefa> {
             ),
             TextButton(
               onPressed: () {
-                Navigator.pushNamed(context, '/TodoList');
+                Navigator.pushNamed(context, '/TodoList', arguments: _descricaoTarefa, _tituloTarefa);
               },
               child: Image.asset(
                 'assets/botton_confirm.png',
