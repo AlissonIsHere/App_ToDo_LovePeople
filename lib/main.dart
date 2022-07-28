@@ -1,5 +1,6 @@
 import 'package:app_todo_lovepeople/view/cadastro/cadastro.dart';
 import 'package:app_todo_lovepeople/view/nova-tarefa/nova_tarefa.dart';
+import 'package:app_todo_lovepeople/view/todo_list/todo-list.dart';
 import 'package:flutter/material.dart';
 
 import 'view/cadastro/cadastro_concluido.dart';
@@ -19,9 +20,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: '',
       theme: ThemeData(
+        scaffoldBackgroundColor: Color.fromRGBO(169, 1, 247, 1),
         primarySwatch: Colors.blue,
       ),
-      home: const CadastroConcluido(),
+      home: const TodoList(),
     );
   }
 }
