@@ -15,9 +15,9 @@ class _TodoListState extends State<TodoList> {
   List<Todo> list = [];
   @override
   void initState() {
-    
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -56,8 +56,8 @@ class _TodoListState extends State<TodoList> {
             children: [
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  const Text(
+                children: const [
+                  Text(
                     'Suas listagens',
                     style: TextStyle(
                         fontFamily: 'Montserrat-SemiBold',
@@ -78,7 +78,7 @@ class _TodoListState extends State<TodoList> {
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(15)),
-                    suffixIcon: Icon(
+                    suffixIcon: const Icon(
                       Icons.search,
                       size: 30,
                       color: Color.fromRGBO(49, 1, 185, 1),
@@ -86,8 +86,8 @@ class _TodoListState extends State<TodoList> {
                     hintText: 'Busque palavras-chave',
                     filled: true,
                     fillColor: Colors.white,
-                    hintStyle: TextStyle(
-                      color: Color.fromRGBO(49, 1, 185, 1),
+                    hintStyle: const TextStyle(
+                      color: const Color.fromRGBO(49, 1, 185, 1),
                       fontSize: 16,
                       fontFamily: 'Tahoma',
                     )),
@@ -102,6 +102,11 @@ class _TodoListState extends State<TodoList> {
                 child: ListTile(
                   title: Text(lista.title ?? ''),
                   subtitle: Text(lista.description ?? ''),
+                  trailing: InkWell(
+                      onTap: () async {
+                        await Navigator.pushNamed(context, 'nova tarefa');
+                      },
+                      child: Image.asset('assets/Group.png')),
                 ),
               );
             },
