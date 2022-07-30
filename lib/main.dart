@@ -1,3 +1,5 @@
+
+import 'package:app_todo_lovepeople/view/login_page.dart';
 import 'package:app_todo_lovepeople/view/cadastro/cadastro.dart';
 import 'package:app_todo_lovepeople/view/nova-tarefa/nova_tarefa.dart';
 import 'package:app_todo_lovepeople/view/todo_list/todo-list.dart';
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color.fromRGBO(169, 1, 247, 1),
         primarySwatch: Colors.blue,
       ),
+
     );
   }
 }
