@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import '../../model/todo.dart';
 
 class TodoList extends StatefulWidget {
@@ -14,6 +12,7 @@ class _TodoListState extends State<TodoList> {
   List<Todo> list = [];
   @override
   void initState() {
+    
     super.initState();
   }
 
@@ -115,12 +114,12 @@ class _TodoListState extends State<TodoList> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 90, top: 90, right: 55),
-            child: IconButton(
-                onPressed: () {
-                  
+            padding: const EdgeInsets.symmetric(vertical: 90),
+            child: InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/NovoTodo');
                 },
-                icon: const Icon(
+                child: const Icon(
                   Icons.add,
                   color: Colors.white,
                   size: 90,
