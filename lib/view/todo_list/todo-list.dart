@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
-
 import '../../model/todo.dart';
 
 class TodoList extends StatefulWidget {
@@ -87,32 +86,107 @@ class _TodoListState extends State<TodoList> {
                     filled: true,
                     fillColor: Colors.white,
                     hintStyle: const TextStyle(
-                      color: const Color.fromRGBO(49, 1, 185, 1),
+                      color: Color.fromRGBO(49, 1, 185, 1),
                       fontSize: 16,
                       fontFamily: 'Tahoma',
                     )),
               ),
             ),
           ),
-          ListView.builder(
-            itemCount: list.length,
-            itemBuilder: (context, index) {
-              final lista = list[index];
-              return Card(
-                child: ListTile(
-                  title: Text(lista.title ?? ''),
-                  subtitle: Text(lista.description ?? ''),
-                  trailing: InkWell(
-                      onTap: () async {
-                        await Navigator.pushNamed(context, 'nova tarefa');
-                      },
-                      child: Image.asset('assets/Group.png')),
-                ),
-              );
-            },
+          Expanded(
+            child: SizedBox(
+              child: ListView.builder(
+                itemCount: list.length,
+                itemBuilder: (context, index) {
+                  final lista = list[index];
+                  return Card(
+                    child: ListTile(
+                      title: Text(lista.title ?? ''),
+                      subtitle: Text(lista.description ?? ''),
+                      trailing: IconButton(
+                          onPressed: () {
+                            _showDialog();
+                          },
+                          icon: Image.asset('assets/Group.png')),
+                    ),
+                  );
+                },
+              ),
+            ),
           ),
+          Padding(
+            padding: const EdgeInsets.only(bottom: 90, top: 90, right: 55),
+            child: IconButton(
+                onPressed: () {
+                  
+                },
+                icon: const Icon(
+                  Icons.add,
+                  color: Colors.white,
+                  size: 90,
+                )),
+          )
         ],
       ),
     );
   }
+}
+
+void _showDialog() {
+  List<Todo> list = [];
+  ListView.builder(itemBuilder: ((context, index) {
+    final nome = list[index];
+
+    return AlertDialog(
+      alignment: Alignment.center,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+      title: const Text(
+        'Deseja deletar este item?',
+        style: TextStyle(
+          fontSize: 15,
+          color: Color(0xFF3101B9),
+          fontFamily: 'Montserrat-SemiBold',
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+      content: Text(
+        '${nome.title} será movido para lixeira.',
+        style: const TextStyle(
+          fontSize: 14,
+          color: Color(0xFF3101B9),
+          fontFamily: 'Montserrat-SemiBold',
+          fontWeight: FontWeight.normal,
+        ),
+      ),
+      contentPadding: EdgeInsets.fromLTRB(20, 2, 0, 10),
+      actions: [
+        MaterialButton(
+          onPressed: () {},
+          child: const Text(
+            'Confirmar',
+            style: TextStyle(
+              fontSize: 14,
+              color: Color(0xFF3101B9),
+              fontFamily: 'Montserrat-SemiBold',
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+        ),
+        MaterialButton(
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text(
+            'Cancelar',
+            style: TextStyle(
+              fontSize: 14,
+              color: Color(0xFFA901F7),
+              fontFamily: 'Montserrat-SemiBold',
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+        ),
+      ],
+    );
+  }));
 }
