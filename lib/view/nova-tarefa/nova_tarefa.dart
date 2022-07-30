@@ -140,7 +140,9 @@ class _NovaTarefaState extends State<NovaTarefa> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             TextButton(
-              onPressed: () {/*vai voltar para tela da lista*/},
+              onPressed: () {
+                Navigator.pop(context);
+              },
               child: Image.asset(
                 'assets/botton_cancel.png',
                 width: 35,
@@ -148,7 +150,9 @@ class _NovaTarefaState extends State<NovaTarefa> {
               ),
             ),
             TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/TodoList');
+              },
               child: Image.asset(
                 'assets/botton_confirm.png',
                 width: 50,

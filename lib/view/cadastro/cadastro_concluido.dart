@@ -34,7 +34,9 @@ class _CadastroConcluidoState extends State<CadastroConcluido> {
                     ),
                   ),
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/');
+                    },
                     child: const Text(
                       'Começar',
                       style: TextStyle(

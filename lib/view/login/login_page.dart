@@ -22,7 +22,6 @@ class _LoginPageState extends State<LoginPage> {
                     width: 750,
                     height: 262.93,
                     decoration: const BoxDecoration(
-                      
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(375),
@@ -31,16 +30,16 @@ class _LoginPageState extends State<LoginPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(
-                          'assets/images/logolovepeople.png',
-                          height: 250,
+                          'assets/logocoruja.png',
+                          height: 150,
                           width: 258,
-                          fit: BoxFit.contain,
+                          fit: BoxFit.cover,
                         ),
                         const Text(
                           'LovePeople',
                           style: TextStyle(
                               fontFamily: 'Montserrat-Bold',
-                              fontSize: 10,
+                              fontSize: 13,
                               fontWeight: FontWeight.bold,
                               color: Color.fromRGBO(49, 1, 185, 1)),
                         ),
@@ -101,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                           hintStyle: const TextStyle(
                             color: Color.fromRGBO(49, 1, 185, 1),
                           ),
-                          prefixIcon: IconButton(
+                          suffixIcon: IconButton(
                             onPressed: () {},
                             icon: const Icon(Icons.remove_red_eye),
                           ),
@@ -133,12 +132,14 @@ class _LoginPageState extends State<LoginPage> {
                     type: MaterialType.transparency,
                     child: Ink(
                       decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white, width: 1),
+                        border: Border.all(color: Colors.white, width: 2),
                         color: const Color.fromRGBO(49, 1, 185, 1),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushNamed(context, '/TodoList');
+                        },
                         child: const Center(
                           child: Text(
                             'Entrar',
@@ -173,7 +174,9 @@ class _LoginPageState extends State<LoginPage> {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 2),
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/Cadastro');
+                      },
                       child: const Text(
                         'Clique aqui',
                         style: TextStyle(

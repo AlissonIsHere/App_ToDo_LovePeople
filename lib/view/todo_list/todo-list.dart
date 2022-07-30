@@ -115,12 +115,14 @@ class _TodoListState extends State<TodoList> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(bottom: 90, top: 90, right: 55),
-            child: IconButton(
-                onPressed: () {
-                  
+            padding: const EdgeInsets.symmetric(
+              vertical: 90,
+            ),
+            child: InkWell(
+                onTap: () {
+                  Navigator.pushNamed(context, '/NovoTodo');
                 },
-                icon: const Icon(
+                child: const Icon(
                   Icons.add,
                   color: Colors.white,
                   size: 90,

@@ -190,7 +190,9 @@ class _PagCadastroState extends State<PagCadastro> {
                                 ),
                               )),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.pushNamed(context, '/CadConcluido');
+                            },
                             child: Container(
                               width: 100,
                               child: const Center(
