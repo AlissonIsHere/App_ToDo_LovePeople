@@ -33,9 +33,6 @@ flutter:
 
 
 
-  uses-material-design: true
-
-
   assets:
    - assets/coruja_cadastro.png
 
