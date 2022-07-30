@@ -24,6 +24,13 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color.fromRGBO(169, 1, 247, 1),
         primarySwatch: Colors.blue,
       ),
+      routes: {
+        '/':(context) => LoginPage(),
+        '/Cadastro':(context) => PagCadastro(),
+        '/CadConcluido':(context) => CadastroConcluido(),
+        '/TodoList':(context) => TodoList(),
+        '/NovoTodo':(context) => NovaTarefa(),
+      }
 
     );
   }
