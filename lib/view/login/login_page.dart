@@ -172,7 +172,9 @@ class _LoginPageState extends State<LoginPage> {
                 Padding(
                   padding: const EdgeInsets.only(bottom: 2),
                   child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).pushNamed('/cadastro');
+                      },
                       child: const Text(
                         'Clique aqui',
                         style: TextStyle(

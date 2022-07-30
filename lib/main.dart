@@ -1,5 +1,4 @@
-
-import 'package:app_todo_lovepeople/view/login_page.dart';
+import 'package:app_todo_lovepeople/view/login/login_page.dart';
 import 'package:app_todo_lovepeople/view/cadastro/cadastro.dart';
 import 'package:app_todo_lovepeople/view/nova-tarefa/nova_tarefa.dart';
 import 'package:flutter/material.dart';
@@ -23,9 +22,12 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-    
-      home: const LoginPage(),
-
+      routes: {
+        '/': (context) => const LoginPage(),
+        '/cadastro': (context) => const PagCadastro(),
+        '/cadastroconcluido': (context) => const CadastroConcluido(),
+      },
+      initialRoute: '/',
     );
   }
 }

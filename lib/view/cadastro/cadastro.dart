@@ -190,7 +190,10 @@ class _PagCadastroState extends State<PagCadastro> {
                                 ),
                               )),
                             ),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.of(context)
+                                  .pushNamed('/cadastroconcluido');
+                            },
                             child: Container(
                               width: 100,
                               child: const Center(
@@ -240,7 +243,9 @@ class _PagCadastroState extends State<PagCadastro> {
                             color: Colors.yellow,
                           ),
                         ),
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.of(context).pushNamed('/');
+                        },
                       ),
                     ],
                   ),
