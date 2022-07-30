@@ -32,17 +32,11 @@ flutter:
 
 
 
-  
 
   assets:
-   - assets/
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+   - assets/coruja_cadastro.png
 
-  fonts:
-    - family:  Olho
-      fonts:
-       - asset: assets/icons/Olho.ttf
+ 
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
