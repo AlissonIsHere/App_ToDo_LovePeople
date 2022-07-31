@@ -17,15 +17,6 @@ class _PagCadastroState extends State<PagCadastro> {
   bool _enableObscure = true;
 
   @override
-  void initState() {
-    _nomeController.text = "";
-    _emailController.text = "";
-    _senhaController.text = "";
-    _confirmacaoController.text = "";
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFA901F7),
