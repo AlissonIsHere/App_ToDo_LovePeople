@@ -22,7 +22,6 @@ class _LoginPageState extends State<LoginPage> {
                     width: 750,
                     height: 262.93,
                     decoration: const BoxDecoration(
-                      
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(375),
@@ -31,16 +30,16 @@ class _LoginPageState extends State<LoginPage> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset(
-                          'assets/images/logolovepeople.png',
-                          height: 250,
-                          width: 258,
+                          'assets/logocoruja.png',
+                          height: 150,
+                          width: 158,
                           fit: BoxFit.contain,
                         ),
                         const Text(
                           'LovePeople',
                           style: TextStyle(
                               fontFamily: 'Montserrat-Bold',
-                              fontSize: 10,
+                              fontSize: 13,
                               fontWeight: FontWeight.bold,
                               color: Color.fromRGBO(49, 1, 185, 1)),
                         ),
@@ -101,7 +100,7 @@ class _LoginPageState extends State<LoginPage> {
                           hintStyle: const TextStyle(
                             color: Color.fromRGBO(49, 1, 185, 1),
                           ),
-                          prefixIcon: IconButton(
+                          suffixIcon: IconButton(
                             onPressed: () {},
                             icon: const Icon(Icons.remove_red_eye),
                           ),
